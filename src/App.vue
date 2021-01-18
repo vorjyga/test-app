@@ -1,8 +1,40 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+    <div v-if="$route.name === 'Main'">
+      <router-link
+        :to="{
+          name: 'History'
+        }"
+        >История</router-link
+      >
+      |
+      <router-link
+        :to="{
+          name: 'History',
+          params: {
+            show: 'adding'
+          }
+        }"
+        >История добавлений</router-link
+      >
+      |
+      <router-link
+        :to="{
+          name: 'History',
+          params: {
+            show: 'removing'
+          }
+        }"
+        >История удалений</router-link
+      >
+    </div>
+    <div v-else>
+      <router-link
+        :to="{
+          path: '/'
+        }"
+        >На главную</router-link
+      >
     </div>
     <router-view />
   </div>
