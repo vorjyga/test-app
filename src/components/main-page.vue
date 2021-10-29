@@ -25,6 +25,8 @@ export default class extends Vue {
     }
   }
 }
+
+// third test message
 </script>
 
 <style scoped>
