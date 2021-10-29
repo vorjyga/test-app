@@ -10,3 +10,4 @@ yarn install
 node server\server.js
 yarn serve
 ```
+Всякий хлам для теста
